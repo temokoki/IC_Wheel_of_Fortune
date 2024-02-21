@@ -1,0 +1,206 @@
+html {
+  background-color: #23153c;
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin: 8px -5px;
+}
+
+button {
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bolder;
+  border: 2px #617BFF solid;
+  color: white;
+  background-color: #617BFF;
+  margin: 2px 10px;
+  transition: all 0.2s;
+  padding: 0.2em 0.5em;
+  transform: scale(1);
+  animation: fadeinAnimation 0.5s ease-in;
+}
+
+button:hover {
+  border: 2px #8095FF solid;
+  background-color: #8095FF;
+  transform: scale(1.1);
+}
+
+button:active {
+  border: 2px gray solid;
+  background-color: gray;
+  transform: scale(0.95);
+}
+
+button:disabled {
+  border: 2px rgba(255, 255, 255, 0.1) solid;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(0.95);
+}
+
+input {
+  text-align: center;
+  display: block;
+  margin: 0;
+  border-radius: 7px;
+  border: 2px white solid;
+  background-color: white;
+  padding: 10px 2px;
+  width: 100%;
+  color: #1E1C29;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  transition: all 0.2s;
+  font-size: 12pt;
+  animation: fadeinAnimation 0.5s ease-in;
+}
+
+input:focus {
+  outline: none;
+  border: 2px #617BFF solid;
+}
+
+@keyframes GradientAnimation {
+  0% {
+    background-position: 0% 0%
+  }
+
+  50% {
+    background-position: 0% 100%
+  }
+
+  100% {
+    background-position: 0% 0%
+  }
+}
+
+@keyframes fadeinAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spinBlurAnimation {
+  10% {
+    filter: blur(0px);
+  }
+
+  25% {
+    filter: blur(1.5px);
+  }
+
+  70% {
+    filter: blur(1.5px);
+  }
+
+  85% {
+    filter: blur(0px);
+  }
+}
+
+.spinBlur {
+  animation: spinBlurAnimation;
+  animation-duration: 5s;
+}
+
+@font-face {
+  font-family: headerFont;
+  src: url(SF_Fortune_Wheel.ttf);
+}
+
+#header {
+  font-family: headerFont;
+  font-size: min(2.8vw, 24px);
+  color: ghostwhite;
+  text-shadow: 2px 2px #111111;
+  background: linear-gradient(0deg, rgba(130, 190, 255, 0.5), rgba(230, 120, 255, 0.5));
+  background-size: 100% 200%;
+  animation: GradientAnimation 8s ease infinite;
+}
+
+#withdrawalAddress {
+  display: inline-block;
+  text-align: left;
+  padding-bottom: 0px;
+  width: 80%;
+  min-width: 200px;
+}
+
+#withdrawalAmount {
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 0px;
+  width: 80px;
+}
+
+#displayName {
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 0px;
+  width: 30%;
+  min-width: 200px;
+}
+
+#countDown {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: headerFont;
+  font-size: min(2.8vw, 24px);
+  color: ghostwhite;
+  text-shadow: 2px 2px #111111;
+}
+
+.panel {
+  position: relative;
+  background-color: rgb(48, 48, 48, 0.8);
+  backdrop-filter: blur(1.5px);
+  border-radius: 14px;
+  margin: min(2.5vh, 25px) auto;
+  padding: 5px 15px;
+  width: 80%;
+  max-width: 750px;
+  color: white;
+  outline: 3px solid whitesmoke;
+  box-shadow: 0 3px 0 3px #add2ff, 0 0.7em 3px 0em rgba(0, 0, 0, 0.5);
+  animation: fadeinAnimation 0.5s ease-in;
+}
+
+.subPanel {
+  display: table;
+  text-align: center;
+  width: 100%;
+  animation: fadeinAnimation 0.5s ease-in;
+}
+
+.highlighted-text {
+  word-wrap: break-word;
+  color: rgb(50, 250, 50);
+  font-weight: 500;
+}
+
+.feedback-text {
+  color: yellow;
+  font-weight: 500;
+  text-align: center;
+}
