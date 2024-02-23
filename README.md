@@ -3,6 +3,7 @@
 Simple wheel of fortune game with Internet Identity authentication integration and ICP coin transferring functionality via Ledger canister.
 <br>Players are charged 0.1 ICP to participate in game. The  winner is chosen randomly and gets 100% of betted amount of ICP - 0.0001ICP (IC ledger's standard fee)
 <br>Backend is written in Motoko, frontend is built using React/JSX.
+<br>Game demo canister: [https://vu6th-iyaaa-aaaan-qlw2a-cai.icp0.io](https://vu6th-iyaaa-aaaan-qlw2a-cai.icp0.io)
 
 <p align="center"><img src="screenshot.png" /></p>
 
